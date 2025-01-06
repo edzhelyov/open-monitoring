@@ -17,3 +17,8 @@ https://github.com/orgs/discourse/repositories?language=&q=log&sort=&type=all
 https://en.wikipedia.org/wiki/Tracing_(software)#Event_logging
 https://logger.rocketjob.io/index.html
 https://github.com/dwbutler/logstash-logger
+
+### Field definition
+
+https://www.elastic.co/guide/en/ecs/current/ecs-field-reference.html
+https://github.com/open-telemetry/semantic-conventions/tree/main/docs/general
