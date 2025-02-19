@@ -23,3 +23,17 @@ Ruby stdlib: https://docs.ruby-lang.org/en/master/Logger.html
 
 * https://www.elastic.co/guide/en/ecs/current/ecs-field-reference.html
 * https://github.com/open-telemetry/semantic-conventions/tree/main/docs/general
+
+## APM client libraries
+
+* AppSignal
+* Sentry
+* OpenTelemetry
+* Datadog
+* NewRelic
+
+## Metrics
+
+* StatsD
+* Prometheus
+* OpenTelemetry
