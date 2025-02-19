@@ -31,6 +31,7 @@ Ruby stdlib: https://docs.ruby-lang.org/en/master/Logger.html
 * OpenTelemetry
 * Datadog
 * NewRelic
+* (Amazon X-Ray)[https://aws.amazon.com/xray/]
 
 ## Metrics
 
