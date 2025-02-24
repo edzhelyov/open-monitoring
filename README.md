@@ -19,6 +19,11 @@ Ruby stdlib: https://docs.ruby-lang.org/en/master/Logger.html
 * https://logger.rocketjob.io/index.html
 * https://github.com/dwbutler/logstash-logger
 
+Theory
+
+* https://uptrace.dev/glossary/structured-logging
+* https://uptrace.dev/opentelemetry/logs
+
 ### Field definition
 
 * https://www.elastic.co/guide/en/ecs/current/ecs-field-reference.html
