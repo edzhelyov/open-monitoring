@@ -43,3 +43,25 @@ Theory
 * StatsD
 * Prometheus
 * OpenTelemetry
+
+# Collecting signals
+
+In theory everything is event. Logs are one specific event, and spans are events with duration, or start and end event. Aggregations on events are in forms of metrics.
+
+Events that are so small it's no reasonable to collect them often are gathered by periodic sampling in the form of metrics – CPU load, Memory usage, etc.
+For the rest of the events metrics can be calculated from the raw data, this is approach that is present in the Otel Collector where you can configure what metrics to
+calculate from the upcoming data. This approach is not very common.
+
+Signal, as defined by OpenTelemetry, are mainly used for introspection about what was the state and what happened in a system. For these a UI is needed to be able to visualize
+the data in the form of tables, graphs and the ability to search and group it.
+
+## Dashboards
+
+For different types of signals there is well established set of default Dashboards which are really good to have automatically. Think of CPU, Free disk, I/O, etc. And number
+requests, latency, throughtput. If your UI support such auto dashboards it makes your life much easier, instead of you thinking about what is nice to have visualized in the
+first place.
+
+## Alarms
+
+The other important aspect of collecting observability data is to get notified when problems occur. For this it's better if you get predefined alarms for most common
+infrastructure issues.
