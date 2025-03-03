@@ -61,6 +61,11 @@ For different types of signals there is well established set of default Dashboar
 requests, latency, throughtput. If your UI support such auto dashboards it makes your life much easier, instead of you thinking about what is nice to have visualized in the
 first place.
 
+## Alarms
+
+The other important aspect of collecting observability data is to get notified when problems occur. For this it's better if you get predefined alarms for most common
+infrastructure issues.
+
 # Databases
 
 When you have a database a few important things to consider are:
@@ -69,8 +74,3 @@ When you have a database a few important things to consider are:
 * What is your data loss window in case of a crash. It's the time between disk sync and or replica sync.
 * Do you have replication?
 * Alarms about running out of disk, memory and cpu utilization above 90%.
-
-## Alarms
-
-The other important aspect of collecting observability data is to get notified when problems occur. For this it's better if you get predefined alarms for most common
-infrastructure issues.
