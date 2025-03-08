@@ -40,9 +40,24 @@ Theory
 
 ## Metrics
 
+These are the 3 most widely used formats for metrics.
+
 * StatsD
-* Prometheus
+* Prometheus/OpenMetrics
 * OpenTelemetry
+
+Popular open source backends
+
+* https://github.com/netdata/netdata, auto alerts, GPL agent, Cloud: free community tier, 4.5$/node/month unlimited.
+* Uptrace with very good documentation https://uptrace.dev/tools/api-monitoring-tools
+
+Theory
+
+* RED, USE, Four signals: https://grafana.com/files/grafanacon_eu_2018/Tom_Wilkie_GrafanaCon_EU_2018.pdf
+* Dimensions per user and per endpoint. To show what is the user experience (high cardinality) and how each endpoint behaves (low cardinality).
+* Low-scale: 1–300 requests per minute (~0.1–5 RPS)
+* Medium-scale: 300–10,000 requests per minute (~5–166 RPS)
+* High-scale: 10,000+ requests per minute (~166+ RPS)
 
 # Collecting signals
 
