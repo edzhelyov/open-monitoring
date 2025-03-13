@@ -17,3 +17,8 @@ to allow more freedom in indexing.
 
 From client perspective, the idea of structured logging is to have a lot of information and then allow for on demand search and aggregations. If you keep part of the fields
 as text you can't do aggregations. It is interesting how people solve that in databases like Clickhouse.
+
+## Links
+
+* https://www.elastic.co/guide/en/ecs/current/ecs-reference.html
+* https://opentelemetry.io/docs/concepts/semantic-conventions/
