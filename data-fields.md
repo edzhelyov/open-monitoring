@@ -18,6 +18,16 @@ to allow more freedom in indexing.
 From client perspective, the idea of structured logging is to have a lot of information and then allow for on demand search and aggregations. If you keep part of the fields
 as text you can't do aggregations. It is interesting how people solve that in databases like Clickhouse.
 
+## Best practices
+
+1. Application should follow established standards for naming and type as much as possible.
+Fields that contain undefined values or dynamic values should follow an established default – storing them as strings is very good default.
+2. Use namespacing for keys: `event.data`, etc.
+3. Use underscore in names: `user_id`.
+4. Prefix custom attributes with meaninigful application names.
+5. Enforce types on the application or collector level. For example, treat user_id as number and have the Collector to enforce it.
+6. Move the data problem to the application generating the data, not the backend.
+
 ## Links
 
 * https://www.elastic.co/guide/en/ecs/current/ecs-reference.html
