@@ -14,6 +14,10 @@ Since you’re using dynamic mapping and want to avoid enforcing a schema, you n
 #### 1. Use a Multi-Field Approach with a Catch-All Field
 Instead of letting every field be dynamically mapped directly, route all developer-defined attributes into a single "catch-all" field (e.g., `attributes`) that supports multiple types via multi-fields or a generic type like `text`. This keeps the top-level field names predictable while allowing nested flexibility.
 
+Set the field type as [flattened](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/flattened.html) type on `attributes` to prevent conflict in the subfields. This will treat all keys and values as keywords.
+
+You can enforce a type naming convention for the upper fields in order to allow developers the posibility to have other types. You can treat everything as keyword and then enforce numbers and date with a convention like – `order_numeric`, `created_at_date`, etc.
+
 **How to Implement:**
 - Define an index template with a fixed mapping for a field like `attributes` as an `object` or `nested` type.
 - Developers log their custom attributes under this field in their JSON logs, e.g.:
@@ -197,6 +201,7 @@ Force Elasticsearch to map all dynamically added fields as `text` or `keyword` t
 ### Recommended Approach
 The best solution depends on your priorities:
 - **If flexibility and simplicity are key:** Use **Option 1 (Multi-Field with `attributes`)**. It balances developer freedom with a manageable structure and avoids conflicts by scoping custom fields under a single object.
+- **You can enforce a type naming convention** for the upper fields in order to allow developers the posibility to have other types. You can treat everything as keyword and then enforce numbers and date with a convention like – `order_numeric`, `created_at_date`, etc.
 - **If you want minimal changes and can tolerate some data loss:** Use **Option 2 (`ignore_malformed`)**.
 - **If you need full control and no data loss:** Use **Option 3 (Ingest Pipeline)** to normalize fields dynamically.
 
