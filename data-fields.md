@@ -28,6 +28,10 @@ Fields that contain undefined values or dynamic values should follow an establis
 5. Enforce types on the application or collector level. For example, treat user_id as number and have the Collector to enforce it.
 6. Move the data problem to the application generating the data, not the backend.
 
+## Units
+
+Have a clear well defined units for different metrics – dates, durations, time intervals, etc.
+
 ## Links
 
 * https://www.elastic.co/guide/en/ecs/current/ecs-reference.html
